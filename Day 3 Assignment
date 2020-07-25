@@ -1,0 +1,22 @@
+pragma solidity >=0.4.17 <0.7.0;
+
+contract House{
+    
+    string OwnerOfTheHouse;
+    
+    function House(string newowner) public{
+        
+        OwnerOfTheHouse = newowner;
+    }
+    
+    function setdetails(string newowner) public{
+        OwnerOfTheHouse = newowner;
+    }
+    
+    function getdetail() public view returns(string){
+        
+        return(OwnerOfTheHouse);
+    }
+    
+    
+}
