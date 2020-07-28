@@ -1,0 +1,40 @@
+pragma solidity ^0.4.21 < 0.6.12; 
+
+contract Repordcard {
+
+    string public name;
+    uint public   Rollno ;
+    string public Batch;
+    uint public English;
+    uint public Maths;
+    uint public Science;
+    uint public Socialscience;
+    string public Status;
+    
+    function Reportcard(string newname, uint newRollno, string newBatch, uint newEnglish, uint newMaths, uint newScience, uint newSocialscience, string newStatus) public{
+
+        name = newname;
+        Rollno = newRollno;
+        Batch = newBatch;
+        English = newEnglish;
+        Maths= newMaths;
+        Science = newScience;
+        Socialscience = newSocialscience;
+        Status = newStatus;
+
+    }
+
+    function setReportcardNewDetails(string newname, uint newRollno, string newBatch) public{
+
+        name = newname;
+        Rollno = newRollno;
+        Batch = newBatch;
+
+    }
+
+    function getReportcardCurrentDetails() public view returns(string,uint,string,uint,uint,uint,uint,string){
+        return(name, Rollno, Batch, English, Maths, Science, Socialscience, Status);
+    }
+
+
+}
